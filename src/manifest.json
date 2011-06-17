@@ -1,0 +1,16 @@
+{
+    "name": "Turntable Notify",
+    "version": "0.1",
+    "description": "Notify song name and comments via desktop notify.",
+
+    "permissions": [
+		"tabs",
+        "notifications",
+        "http://turntable.fm/*"
+    ],
+    "content_scripts": [{
+        "js": ["libs/jquery-1.6.1.min.js", "libs/jquery.jwNotify.js", "main.js"],
+        "matches": ["http://turntable.fm/*"]
+    }],
+	"background_page": "background.html"
+}
